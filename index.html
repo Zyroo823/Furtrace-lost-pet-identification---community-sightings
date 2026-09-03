@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="theme-color" content="#FDFBF7" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>FURTRACE</title>
+    <meta name="description" content="Lost pet identification and community sightings platform with intelligent image matching and privacy radar zones." />
+    <meta name="keywords" content="lost pet, find lost dog, missing cat finder, pet identification, pet facial recognition, neighborhood pet watch, lost dog Cebu, pet recovery" />
+    <meta name="author" content="FURTRACE Community Platform" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <link rel="canonical" href="https://furtrace.org/" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://furtrace.org/" />
+    <meta property="og:title" content="FURTRACE - Lost Pet Identification & Community Sightings" />
+    <meta property="og:description" content="Lost pet identification and community sightings platform with intelligent image matching and privacy radar zones." />
+    <meta property="og:image" content="https://images.unsplash.com/photo-1548767797-d8c844163c4c?auto=format&fit=crop&w=1200&h=630&q=85" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Golden Retriever dog being cared for after community reunion" />
+    <meta property="og:site_name" content="FURTRACE" />
+    <meta property="og:locale" content="en_US" />
+
+    <!-- Twitter / X -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://furtrace.org/" />
+    <meta name="twitter:title" content="FURTRACE - Lost Pet Identification & Community Sightings" />
+    <meta name="twitter:description" content="Lost pet identification and community sightings platform with intelligent image matching and privacy radar zones." />
+    <meta name="twitter:image" content="https://images.unsplash.com/photo-1548767797-d8c844163c4c?auto=format&fit=crop&w=1200&h=630&q=85" />
+    <meta name="twitter:image:alt" content="Golden Retriever dog resting safely at community watch hub" />
+
+    <!-- Google Analytics 4 (GA4) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FURTRACE26"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-FURTRACE26', {
+        page_title: document.title,
+        page_location: window.location.href,
+        send_page_view: true
+      });
+    </script>
+
+    <!-- Mobile App & Theme Styling -->
+    <meta name="theme-color" content="#FDFBF7" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="FURTRACE" />
+
+    <!-- Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&family=Outfit:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Structured Data 1: WebApplication Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "FURTRACE",
+      "url": "https://furtrace.org",
+      "applicationCategory": "CommunityApplication",
+      "operatingSystem": "All",
+      "description": "Lost pet identification and neighborhood community sightings platform powered by intelligent image comparison and privacy-first radar zones.",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    }
+    </script>
+
+    <!-- Structured Data 2: Local Schema (Local Community Organization / Animal Welfare Hub) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "AnimalShelter",
+      "name": "FURTRACE Community Pet Watch Center",
+      "image": "https://images.unsplash.com/photo-1548767797-d8c844163c4c?auto=format&fit=crop&w=1200&h=630&q=85",
+      "url": "https://furtrace.org",
+      "telephone": "+63-917-555-8492",
+      "priceRange": "Free",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Maximo V. Patalinghug Jr. Avenue, Pusok",
+        "addressLocality": "Lapu-Lapu City",
+        "addressRegion": "Cebu",
+        "postalCode": "6015",
+        "addressCountry": "PH"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 10.3157,
+        "longitude": 123.9664
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "opens": "00:00",
+          "closes": "23:59"
+        }
+      ],
+      "sameAs": [
+        "https://facebook.com/furtracecommunity",
+        "https://twitter.com/furtrace"
+      ]
+    }
+    </script>
+  </head>
+  <body class="bg-[#FDFBF7] text-[#1E293B] antialiased selection:bg-[#E06D53]/20 selection:text-[#E06D53]">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

@@ -1,0 +1,11 @@
+# robots.txt for FURTRACE Lost Pet Identification & Community Sightings
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /private/
+
+# Host configuration
+Host: https://furtrace.org
+
+# Sitemap location
+Sitemap: https://furtrace.org/sitemap.xml

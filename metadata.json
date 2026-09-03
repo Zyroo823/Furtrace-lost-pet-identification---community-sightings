@@ -1,0 +1,8 @@
+{
+  "name": "FURTRACE",
+  "description": "Lost pet identification and community sightings platform with intelligent image matching and privacy radar zones.",
+  "requestFramePermissions": ["camera", "geolocation"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+
+
