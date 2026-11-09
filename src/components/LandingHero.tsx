@@ -44,9 +44,9 @@ export const LandingHero: React.FC<LandingHeroProps> = ({
         
         {/* Left Headline & Community Pitch */}
         <div className="lg:col-span-7 space-y-4 sm:space-y-5">
-          <div className="inline-flex items-center gap-2 bg-amber-100/80 border border-amber-200 px-3 py-1.5 rounded-full text-xs font-bold text-[#E06D53] max-w-full">
+          <div className="inline-flex items-center gap-2 bg-amber-100/80 border border-amber-200 px-3.5 py-1.5 rounded-full text-xs font-bold text-[#E06D53] max-w-full">
             <Heart className="w-3.5 h-3.5 fill-current shrink-0" />
-            <span className="truncate">Community Lost Pet Recovery • 100% Free Forever</span>
+            <span className="whitespace-normal sm:whitespace-nowrap">Community Lost Pet Recovery • 100% Free Forever</span>
           </div>
 
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 tracking-tight font-display leading-tight">
@@ -58,18 +58,18 @@ export const LandingHero: React.FC<LandingHeroProps> = ({
           </p>
 
           {/* 3-Second Visual Value Proposition */}
-          <div className="grid grid-cols-3 gap-2 py-2 max-w-lg">
-            <div className="bg-white/80 p-2.5 rounded-xl border border-amber-900/10 text-center">
-              <span className="text-[11px] font-bold text-slate-900 block font-display">1. Snap Photo</span>
-              <span className="text-[10px] text-slate-500">Upload in seconds</span>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5 py-2 max-w-lg">
+            <div className="bg-white/90 p-3 rounded-xl border border-amber-900/10 text-center shadow-2xs">
+              <span className="text-xs font-bold text-slate-900 block font-display whitespace-nowrap">1. Snap Photo</span>
+              <span className="text-[11px] text-slate-500 block">Upload in seconds</span>
             </div>
-            <div className="bg-white/80 p-2.5 rounded-xl border border-amber-900/10 text-center">
-              <span className="text-[11px] font-bold text-[#E06D53] block font-display">2. Match Markings</span>
-              <span className="text-[10px] text-slate-500">Instant scan</span>
+            <div className="bg-white/90 p-3 rounded-xl border border-amber-900/10 text-center shadow-2xs">
+              <span className="text-xs font-bold text-[#E06D53] block font-display whitespace-nowrap">2. Match Markings</span>
+              <span className="text-[11px] text-slate-500 block">Instant scan</span>
             </div>
-            <div className="bg-white/80 p-2.5 rounded-xl border border-amber-900/10 text-center">
-              <span className="text-[11px] font-bold text-[#7DA18B] block font-display">3. Reunited Safe</span>
-              <span className="text-[10px] text-slate-500">Private alerts</span>
+            <div className="bg-white/90 p-3 rounded-xl border border-amber-900/10 text-center shadow-2xs">
+              <span className="text-xs font-bold text-[#7DA18B] block font-display whitespace-nowrap">3. Reunited Safe</span>
+              <span className="text-[11px] text-slate-500 block">Private alerts</span>
             </div>
           </div>
 
@@ -77,43 +77,43 @@ export const LandingHero: React.FC<LandingHeroProps> = ({
           <div className="flex flex-col sm:flex-row flex-wrap items-stretch sm:items-center gap-3 pt-1">
             <button
               onClick={onOpenLostRegisterModal}
-              className="w-full sm:w-auto px-6 py-3.5 min-h-[48px] bg-[#E06D53] hover:bg-[#c95d45] text-white font-extrabold rounded-2xl shadow-lg hover:shadow-xl flex items-center justify-center gap-2 transition-all active:scale-98 text-sm font-display cursor-pointer"
+              className="w-full sm:w-auto px-6 py-3.5 min-h-[48px] bg-[#E06D53] hover:bg-[#c95d45] text-white font-extrabold rounded-2xl shadow-md hover:shadow-lg flex items-center justify-center gap-2 transition-all active:scale-98 text-sm font-display cursor-pointer whitespace-nowrap shrink-0"
             >
               <Sparkles className="w-4 h-4 shrink-0" />
-              <span>Post Lost Pet (Free)</span>
+              <span>Report Lost Pet</span>
               <ArrowRight className="w-4 h-4 shrink-0" />
             </button>
 
             <button
               onClick={onOpenReportModal}
-              className="w-full sm:w-auto px-5 py-3.5 min-h-[48px] bg-[#7DA18B] hover:bg-[#6c8f7a] text-white font-bold rounded-2xl shadow-sm flex items-center justify-center gap-2 transition-all active:scale-98 text-sm font-display cursor-pointer"
+              className="w-full sm:w-auto px-5 py-3.5 min-h-[48px] bg-[#7DA18B] hover:bg-[#6c8f7a] text-white font-bold rounded-2xl shadow-xs flex items-center justify-center gap-2 transition-all active:scale-98 text-sm font-display cursor-pointer whitespace-nowrap shrink-0"
             >
               <Camera className="w-4 h-4 shrink-0" />
-              <span>Report Sighting (Spot)</span>
+              <span>Report Sighting</span>
             </button>
 
             <button
               onClick={onViewMap}
-              className="w-full sm:w-auto px-4 py-3 min-h-[48px] text-slate-700 hover:text-[#E06D53] font-bold flex items-center justify-center gap-1.5 transition-colors text-xs cursor-pointer"
+              className="w-full sm:w-auto px-4 py-3 min-h-[48px] text-slate-700 hover:text-[#E06D53] font-bold flex items-center justify-center gap-1.5 transition-colors text-xs cursor-pointer whitespace-nowrap shrink-0"
             >
               <MapPin className="w-4 h-4 text-[#E06D53] shrink-0" />
-              <span>Explore Radar Map</span>
+              <span>Browse Lost Pets Map</span>
             </button>
           </div>
 
           {/* Transparent Free Pricing & Social Proof */}
-          <div className="flex flex-wrap items-center gap-3 sm:gap-5 pt-1 text-xs text-slate-600">
-            <span className="flex items-center gap-1.5 font-semibold text-emerald-700">
+          <div className="flex flex-wrap items-center gap-3 sm:gap-4 pt-1 text-xs text-slate-600">
+            <span className="flex items-center gap-1.5 font-semibold text-emerald-700 whitespace-nowrap">
               <ShieldCheck className="w-4 h-4 text-emerald-600 shrink-0" />
               <span>Zero Fees • 100% Free</span>
             </span>
             <span className="text-slate-300 hidden sm:inline">•</span>
-            <span className="flex items-center gap-1.5 font-semibold">
+            <span className="flex items-center gap-1.5 font-semibold whitespace-nowrap">
               <HeartHandshake className="w-4 h-4 text-[#E06D53] shrink-0" />
               <span>1,240+ Pets Reunited</span>
             </span>
             <span className="text-slate-300 hidden sm:inline">•</span>
-            <span className="flex items-center gap-1.5 font-semibold">
+            <span className="flex items-center gap-1.5 font-semibold whitespace-nowrap">
               <ShieldCheck className="w-4 h-4 text-emerald-600 shrink-0" />
               <span>Private Address Protection</span>
             </span>

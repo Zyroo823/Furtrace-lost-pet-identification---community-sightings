@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { LostPet, Sighting, PetMatch, MatchStatus, LegalModalType, FlagReport } from './types';
+import { LostPet, Sighting, PetMatch, MatchStatus, FlagReport } from './types';
 import {
   INITIAL_LOST_PETS,
   INITIAL_SIGHTINGS,
@@ -28,7 +28,6 @@ import { DirectionsSection } from './components/DirectionsSection';
 import { StickyMobileCTA } from './components/StickyMobileCTA';
 import { FlagReportModal } from './components/FlagReportModal';
 import { ModerationPanelModal } from './components/ModerationPanelModal';
-import { Lock, Sparkles, Shield, Heart, ArrowRight } from 'lucide-react';
 import { syncService } from './lib/syncService';
 
 const INITIAL_FLAG_REPORTS: FlagReport[] = [
@@ -372,7 +371,7 @@ function AppContent() {
     : null;
 
   return (
-    <div className="min-h-screen bg-[#FDFBF7] text-[#1E293B] flex flex-col font-sans pb-24 md:pb-0">
+    <div className="min-h-screen bg-[#FDFBF7] text-[#1E293B] flex flex-col font-sans pb-24 md:pb-0 overflow-x-hidden w-full max-w-full">
       {/* Top Navigation */}
       <Navbar
         activeView={activeView}
@@ -462,28 +461,30 @@ function AppContent() {
           />
         )}
 
-        {/* Public Community Sections (Case Studies, Reviews, Directions, FAQs) */}
-        <div className="mt-16 space-y-12 border-t border-amber-900/10 pt-10">
-          <CaseStudiesSection
-            onOpenReportModal={handleOpenReportModal}
-            onOpenLostRegisterModal={handleOpenLostRegisterModal}
-          />
+        {/* Public Community Sections (Shown on Dashboard Home) */}
+        {activeView === 'dashboard' && (
+          <div className="mt-16 space-y-12 border-t border-amber-900/10 pt-10">
+            <CaseStudiesSection
+              onOpenReportModal={handleOpenReportModal}
+              onOpenLostRegisterModal={handleOpenLostRegisterModal}
+            />
 
-          <ReviewsSection
-            onOpenReportModal={handleOpenReportModal}
-            onOpenLostRegisterModal={handleOpenLostRegisterModal}
-          />
+            <ReviewsSection
+              onOpenReportModal={handleOpenReportModal}
+              onOpenLostRegisterModal={handleOpenLostRegisterModal}
+            />
 
-          <DirectionsSection
-            onOpenReportModal={handleOpenReportModal}
-            onOpenLostRegisterModal={handleOpenLostRegisterModal}
-          />
+            <DirectionsSection
+              onOpenReportModal={handleOpenReportModal}
+              onOpenLostRegisterModal={handleOpenLostRegisterModal}
+            />
 
-          <FAQSection
-            onOpenReportModal={handleOpenReportModal}
-            onOpenLostRegisterModal={handleOpenLostRegisterModal}
-          />
-        </div>
+            <FAQSection
+              onOpenReportModal={handleOpenReportModal}
+              onOpenLostRegisterModal={handleOpenLostRegisterModal}
+            />
+          </div>
+        )}
       </main>
 
       {/* Persistent Sticky Mobile CTA (Component 9) */}
