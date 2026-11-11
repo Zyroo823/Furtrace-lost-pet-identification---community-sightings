@@ -1,0 +1,6 @@
+- `[ ]` Review and approve implementation plan
+- `[ ]` Clean up App.tsx to remove architecture blueprints and clutter
+- `[ ]` Simplify Navbar.tsx to remove tech/admin tabs
+- `[ ]` Streamline LandingHero.tsx for instant non-tech friendly CTAs
+- `[ ]` Simplify MatchComparisonModal.tsx into a warm, friendly card
+- `[ ]` Verify build & lint success

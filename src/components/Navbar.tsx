@@ -102,52 +102,74 @@ export const Navbar: React.FC<NavbarProps> = ({
           </div>
         </button>
 
-        {/* Desktop Primary View Navigation */}
-        <nav className="hidden md:flex items-center bg-amber-900/5 p-1 rounded-2xl border border-amber-900/10 text-xs font-semibold text-slate-600">
+        {/* Center Nav Links - Clean view switcher (Report buttons are exclusively on the right side) */}
+        <nav className="hidden lg:flex items-center gap-1 bg-amber-900/5 p-1 rounded-2xl border border-amber-900/10 text-xs font-semibold text-slate-600 shrink">
           <button
             onClick={() => onSelectView('dashboard')}
-            className={`px-3.5 py-1.5 rounded-xl flex items-center gap-1.5 transition-all ${
+            className={`px-3 py-1.5 rounded-xl flex items-center gap-1.5 whitespace-nowrap transition-all cursor-pointer ${
               activeView === 'dashboard'
-                ? 'bg-white text-[#E06D53] shadow-xs font-bold'
+                ? 'bg-white text-[#E06D53] shadow-xs font-extrabold'
                 : 'hover:text-slate-900'
             }`}
           >
-            <Sparkles className="w-3.5 h-3.5" />
-            <span>Match Feed</span>
+            <PawPrint className="w-3.5 h-3.5 shrink-0 text-[#E06D53]" />
+            <span>Home</span>
           </button>
 
           <button
             onClick={() => onSelectView('map')}
-            className={`px-3.5 py-1.5 rounded-xl flex items-center gap-1.5 transition-all ${
+            className={`px-3 py-1.5 rounded-xl flex items-center gap-1.5 whitespace-nowrap transition-all cursor-pointer ${
               activeView === 'map'
-                ? 'bg-white text-[#E06D53] shadow-xs font-bold'
+                ? 'bg-white text-[#E06D53] shadow-xs font-extrabold'
                 : 'hover:text-slate-900'
             }`}
           >
-            <Compass className="w-3.5 h-3.5" />
-            <span>Privacy Map</span>
+            <Compass className="w-3.5 h-3.5 shrink-0 text-[#7DA18B]" />
+            <span>Browse Lost Pets</span>
+          </button>
+
+          <button
+            onClick={() => onSelectView('case_studies')}
+            className={`px-3 py-1.5 rounded-xl flex items-center gap-1.5 whitespace-nowrap transition-all cursor-pointer ${
+              activeView === 'case_studies'
+                ? 'bg-white text-[#E06D53] shadow-xs font-extrabold'
+                : 'hover:text-slate-900'
+            }`}
+          >
+            <Sparkles className="w-3.5 h-3.5 text-amber-500 shrink-0" />
+            <span>Success Stories</span>
+          </button>
+
+          <button
+            onClick={() => onSelectView('faq')}
+            className={`px-3 py-1.5 rounded-xl flex items-center gap-1.5 whitespace-nowrap transition-all cursor-pointer ${
+              activeView === 'faq'
+                ? 'bg-white text-[#E06D53] shadow-xs font-extrabold'
+                : 'hover:text-slate-900'
+            }`}
+          >
+            <HelpCircle className="w-3.5 h-3.5 shrink-0" />
+            <span>FAQ</span>
           </button>
         </nav>
 
-        {/* Action Buttons & User Profile Block */}
-        <div className="flex items-center gap-1.5 sm:gap-2">
+        {/* Action Buttons & User Profile Block (Main Red & Green CTA Buttons) */}
+        <div className="flex items-center gap-1.5 sm:gap-2 shrink-0">
           {/* Desktop quick CTA buttons */}
           <button
             onClick={onOpenReportModal}
-            className="hidden sm:flex px-3.5 py-2 min-h-[44px] bg-[#7DA18B] hover:bg-[#6c8f7a] text-white text-xs font-bold rounded-xl shadow-xs items-center gap-1.5 transition-all active:scale-98"
+            className="hidden sm:flex px-3 py-2 min-h-[40px] bg-[#7DA18B] hover:bg-[#6c8f7a] text-white text-xs font-bold rounded-xl shadow-xs items-center gap-1.5 transition-all active:scale-98 shrink-0 whitespace-nowrap cursor-pointer"
           >
-            <Camera className="w-3.5 h-3.5" />
-            <span className="hidden lg:inline">Report Sighting</span>
-            <span className="lg:hidden">Spot</span>
+            <Camera className="w-3.5 h-3.5 shrink-0" />
+            <span>Report Sighting</span>
           </button>
 
           <button
             onClick={onOpenLostRegisterModal}
-            className="hidden sm:flex px-3.5 py-2 min-h-[44px] bg-[#E06D53] hover:bg-[#c95d45] text-white text-xs font-bold rounded-xl shadow-xs items-center gap-1.5 transition-all active:scale-98"
+            className="hidden sm:flex px-3 py-2 min-h-[40px] bg-[#E06D53] hover:bg-[#c95d45] text-white text-xs font-bold rounded-xl shadow-xs items-center gap-1.5 transition-all active:scale-98 shrink-0 whitespace-nowrap cursor-pointer"
           >
-            <Plus className="w-3.5 h-3.5" />
-            <span className="hidden lg:inline">Post Lost Pet</span>
-            <span className="lg:hidden">Lost</span>
+            <Plus className="w-3.5 h-3.5 shrink-0" />
+            <span>Report Lost</span>
           </button>
 
           {/* User Profile Block */}
